@@ -27,7 +27,7 @@ public class IRCMain extends Plugin
                 try {
                     // Connect to the IRC server.
                     bot.connect(config.serverHostname, config.port);
-
+                    bot.identify(config.nickservPass);
                     // Join the #pircbot channel.
                     bot.joinChannel(config.channelName);
                 } catch (Exception ex) {
